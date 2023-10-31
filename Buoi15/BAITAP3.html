@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Bài 3</h2>
+    <p>Viết chương trình nhập vào chiều cao tam giác vuông và in ra tam giác có hình dạng như sau: <br>
+        ***** <br>
+        **** <br>
+        *** <br>
+        ** <br>
+        * <br>
+    </p>
+    <form>
+        <label for="height">Nhập chiều cao tam giác: </label>
+        <input type="number" id="height">
+        <button type="button" onclick="printTriangle()">Submit</button>
+    </form>
+
+    <script>
+        function printTriangle() {
+            const height = parseInt(document.getElementById("height").value);
+            for (let i = height; i >= 1; i--) {
+                let row = "";
+                for (let j = 1; j <= i; j++) {
+                    row += "*";
+                }
+                console.log(row);
+            }
+        }
+    </script>
+</body>
+</html>
