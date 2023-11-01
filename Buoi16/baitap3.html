@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Bài 3</h2>
+    <p>Viết chương trình nhập vào số hạng đầu tiên và công sai của cấp số cộng. <br>
+        In ra 10 số đầu tiên của cấp số cộng đó. <br>
+        Ví dụ: số hạng đầu tiên = 3, công sai = 5 <br>
+        Output: 3 8 13 18 23 28 33 38 43 48.</p>
+    <form>
+        <label for="firstTerm">Nhập số hạng đầu tiên: </label>
+        <input type="number" id="firstTerm"> <br>
+        
+        <label for="commonDifference">Nhập công sai của cấp số cộng: </label>
+        <input type="number" id="commonDifference">
+        <button type="button" onclick="printArithmeticSequence()">Submit</button>
+    </form>
+    <script>
+        function printArithmeticSequence() {
+            const firstTerm = parseInt(document.getElementById("firstTerm").value);
+            const commonDifference = parseInt(document.getElementById("commonDifference").value);
+
+            let sequence = [];
+            let currentTerm = firstTerm;
+
+            for (let i = 0; i < 10; i++) {
+                sequence.push(currentTerm);
+                currentTerm += commonDifference;
+            }
+
+            alert("Các số đầu tiên của cấp số cộng: " + sequence.join(" "));
+        }
+    </script>
+</body>
+</html>

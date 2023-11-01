@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Bài 4</h2>
+    <p>Viết chương trình nhập vào một số n. In ra bảng cửu chương của n. <br>
+        Ví dụ: n = 2 thì in ra: <br>
+        2 x 1 = 2 <br>
+        2 x 2 = 4 <br>
+        2 x 3 = 6 <br>
+        2 x 4 = 8 <br>
+        2 x 5 = 10 <br>
+        2 x 6 = 12 <br>
+        2 x 7 = 14 <br>
+        2 x 8 = 16 <br>
+        2 x 9 = 18 <br>
+        2 x 10 = 20</p>
+    <form>
+        <label for="number">Nhập số nguyên n: </label>
+        <input type="number" id="number">
+        <button type="button" onclick="printMultiplicationTable()">Submit</button>
+    </form>
+    <script>
+        function printMultiplicationTable() {
+            const n = parseInt(document.getElementById("number").value);
+
+            if (isNaN(n)) {
+                alert("Vui lòng nhập số nguyên n.");
+                return;
+            }
+
+            for (let i = 1; i <= 10; i++) {
+                const result = n * i;
+                console.log(n + " x " + i + " = " + result);
+            }
+        }
+    </script>
+</body>
+</html>
