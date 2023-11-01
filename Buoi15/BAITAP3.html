@@ -23,12 +23,17 @@
     <script>
         function printTriangle() {
             const height = parseInt(document.getElementById("height").value);
-            for (let i = height; i >= 1; i--) {
+            let i = height;
+
+            while (i >= 1) {
                 let row = "";
-                for (let j = 1; j <= i; j++) {
+                let j = 1;
+                while (j <= i) {
                     row += "*";
+                    j++;
                 }
                 console.log(row);
+                i--;
             }
         }
     </script>
