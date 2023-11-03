@@ -13,21 +13,5 @@
         <input type="number" id="number">
         <button type="button" onclick="processNumber()">Submit</button>
     </form>
-
-    <script>
-        function processNumber() {
-            const n = parseInt(document.getElementById("number").value);
-            const nString = n.toString();
-            const numDigits = nString.length;
-            
-            let sum = 0;
-            for (let i = 0; i < numDigits; i++) {
-                sum += parseInt(nString.charAt(i));
-            }
-
-            const reversedNumber = parseInt(nString.split("").reverse().join(""));
-            console.log(n + " có " + numDigits + " chữ số, tổng các chữ số: " + sum + ", số đảo ngược của n: " + reversedNumber);
-        }
-    </script>
 </body>
 </html>
