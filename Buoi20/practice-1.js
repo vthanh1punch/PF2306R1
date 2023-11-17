@@ -1,15 +1,19 @@
 /**
- * Bài 1:
-    Viết hàm sumEven() nhận vào một số `n` và in ra tổng các số chẵn từ 2 đến n.
-    Ví dụ:
-    sumEven(10)
-
-    Output:
-    30
- */
-
-function sumEven(n) {
-    
+ * Viết hàm isLeapYear() nhận vào một số năm và kiếm tra xem đó có phải là năm nhuận hay không.
+ * Nếu có, trả về true. Ngược lại, trả về false.
+ * 
+ * Ví dụ: 
+ * isLeapYear(2016)
+ * 
+ * Output:
+ * false
+ *  */ 
+function isLeapYear(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-sumEven(10);
+console.log(isLeapYear(2016));

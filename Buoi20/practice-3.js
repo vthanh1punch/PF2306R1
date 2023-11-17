@@ -1,9 +1,29 @@
-// Viết hàm solveEquation() để giải phương trình 
-// bậc nhất ax + b = 0 với a và b là 2 tham số đầu vào.
-function solveEquation(a, b) {
+/**
+ * Viết hàm isPrimeNumber() nhận vào một số nguyên và kiểm tra xem đó có phải là số nguyên tố hay không
+ * Nếu có, trả về true. Ngược lại, trả về false.
+ * 
+ * Ví dụ: 
+ * isPrimeNumber(4)
+ * 
+ * Output:
+ * false
+ *  
+ * */ 
+
+function isPrimeNumber(num) {
+    if (num <= 1) {
+        return false; 
+    }
+
     
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+
+    return true; 
 }
 
-solveEquation(2, -4);
-solveEquation(0, 0);
-solveEquation(0, -4);
+
+console.log(isPrimeNumber(4));
