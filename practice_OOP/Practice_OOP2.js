@@ -49,7 +49,7 @@ class Vehicle {
     }
 }
 
-// Khởi tạo các đối tượng Vehicle và hiển thị thông tin
+
 const vehicle1 = new Vehicle("Nobita", "Xe máy", 90, 1500);
 const vehicle2 = new Vehicle("Suneo", "Xe hơi", 180, 25000);
 

@@ -16,17 +16,17 @@ class Rectangle {
         this.width = width;
     }
 
-    // Phương thức tính diện tích
+
     calculateArea() {
         return this.length * this.width;
     }
 
-    // Phương thức tính chu vi
+
     calculatePerimeter() {
         return 2 * (this.length + this.width);
     }
 
-    // Phương thức hiển thị thông tin
+
     showInfo() {
         console.log("Chiều dài: " + this.length);
         console.log("Chiều rộng: " + this.width);
@@ -35,11 +35,11 @@ class Rectangle {
     }
 }
 
-// Tạo đối tượng hình chữ nhật
+
 let rectangle1 = new Rectangle(5, 10);
 let rectangle2 = new Rectangle(7, 3);
 
-// Hiển thị thông tin của đối tượng
+
 console.log("Hình chữ nhật 1:");
 rectangle1.showInfo();
 
